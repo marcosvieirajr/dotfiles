@@ -153,10 +153,13 @@ nnoremap <C-f> :NERDTreeFind<CR>
 " .............................................................................
 
 " :echo g:airline_section_z
-au User AirlineAfterInit :let g:airline_symbols.linenr = ' ln:'
-au User AirlineAfterInit :let g:airline_symbols.maxlinenr = '☰ '
-au User AirlineAfterInit :let g:airline_symbols.colnr = ' cn:'
+au User AirlineAfterInit :let g:airline_symbols.linenr = ' '
+au User AirlineAfterInit :let g:airline_symbols.maxlinenr = ''
+au User AirlineAfterInit :let g:airline_symbols.colnr = ' :'
 
+"au User AirlineAfterInit :let g:airline_symbols.linenr = ' ln:'
+"au User AirlineAfterInit :let g:airline_symbols.maxlinenr = '☰ '
+"au User AirlineAfterInit :let g:airline_symbols.colnr = ' cn:'
 " ----------------------------------------------------------------------------
 " Temp 
 " ----------------------------------------------------------------------------
