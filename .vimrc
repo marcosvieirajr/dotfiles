@@ -1,6 +1,6 @@
 " -----------------------------------------------------------------------------
 " This config expects you to have Plug installed.
-" refs: https://github.com/mhinz/vim-signify/blob/master/doc/signify.txt
+" refs: https://github.com/nickjj/dotfiles/blob/master/.vimrc
 " -----------------------------------------------------------------------------
  
 " -----------------------------------------------------------------------------
@@ -8,6 +8,8 @@
 " -----------------------------------------------------------------------------
 
 call plug#begin('~/.vim/plugged')
+" To install: curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+"    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 " The default plugin directory will be as follows:
 "   - Vim (Linux/macOS): '~/.vim/plugged'
 "   - Vim (Windows): '~/vimfiles/plugged'
@@ -20,11 +22,11 @@ call plug#begin('~/.vim/plugged')
 "
 " Reload .vimrc and :PlugInstall to install plugins.
 
-" Gruvbox Community theme.
-Plug 'gruvbox-community/gruvbox'
-
 Plug 'vim-airline/vim-airline'
 Plug 'preservim/nerdtree'
+
+" Gruvbox Community theme.
+Plug 'gruvbox-community/gruvbox'
 
 " Show git file changes in the gutter.
 Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
@@ -146,7 +148,14 @@ set wildmenu
 nnoremap <C-t> :NERDTreeToggle<CR>
 nnoremap <C-f> :NERDTreeFind<CR>
 
+" .............................................................................
+" vim-airline/vim-airline
+" .............................................................................
 
+" :echo g:airline_section_z
+au User AirlineAfterInit :let g:airline_symbols.linenr = ' ln:'
+au User AirlineAfterInit :let g:airline_symbols.maxlinenr = '☰ '
+au User AirlineAfterInit :let g:airline_symbols.colnr = ' cn:'
 
 " ----------------------------------------------------------------------------
 " Temp 
