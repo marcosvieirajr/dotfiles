@@ -1,5 +1,5 @@
 
-"source ~/.vimrc      " Source your .vimrc
+source ~/.vimrc      " Source your .vimrc
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
