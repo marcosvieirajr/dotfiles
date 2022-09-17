@@ -30,6 +30,9 @@ Plug 'gruvbox-community/gruvbox'
 
 " Show git file changes in the gutter.
 Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+
+" Shows the context of the currently visible buffer contents 
+Plug 'wellle/context.vim'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -135,6 +138,7 @@ vnoremap jk <esc>
 " esc in command mode
 cnoremap jk <C-C>
 
+nnoremap <NL> i<CR><ESC>
 " -----------------------------------------------------------------------------
 " Basic autocommands
 " -----------------------------------------------------------------------------
