@@ -33,6 +33,9 @@ Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 
 " Shows the context of the currently visible buffer contents 
 Plug 'wellle/context.vim'
+
+" https://github.com/mg979/vim-visual-multi
+Plug 'mg979/vim-visual-multi'
 call plug#end()
 
 " -----------------------------------------------------------------------------
@@ -177,7 +180,6 @@ au User AirlineAfterInit :let g:airline_symbols.colnr = ' :'
 "   https://github.com/JetBrains/ideavim
 "   https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
 "   https://towardsdatascience.com/the-essential-ideavim-remaps-291d4cd3971b
-
 " ----------------------------------------------------------------------------
 
 if has('ide')
