@@ -138,7 +138,7 @@ vnoremap jk <esc>
 " esc in command mode
 cnoremap jk <C-C>
 
-nnoremap <NL> i<CR><ESC>
+nnoremap <c-j> i<CR><ESC>
 " -----------------------------------------------------------------------------
 " Basic autocommands
 " -----------------------------------------------------------------------------
@@ -171,6 +171,34 @@ au User AirlineAfterInit :let g:airline_symbols.colnr = ' :'
 "au User AirlineAfterInit :let g:airline_symbols.linenr = ' ln:'
 "au User AirlineAfterInit :let g:airline_symbols.maxlinenr = '☰ '
 "au User AirlineAfterInit :let g:airline_symbols.colnr = ' cn:'
+
+" ----------------------------------------------------------------------------
+" IdeaVin 
+"   https://github.com/JetBrains/ideavim
+"   https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
+"   https://towardsdatascience.com/the-essential-ideavim-remaps-291d4cd3971b
+
+" ----------------------------------------------------------------------------
+
+if has('ide')
+  " mappings and options that exist only in IdeaVim
+  map <leader>f <Action>(GotoFile)
+  map <leader>g <Action>(FindInPath)
+  map <leader>b <Action>(Switcher)
+
+  if &ide =~? 'intellij idea'
+    if &ide =~? 'community'
+      " some mappings and options for IntelliJ IDEA Community Edition
+    elseif &ide =~? 'ultimate'
+      " some mappings and options for IntelliJ IDEA Ultimate Edition
+    endif
+  elseif &ide =~? 'goland'
+    " GoLand specific mappings and options
+  endif
+else
+  " some mappings for Vim/Neovim
+endif
+
 " ----------------------------------------------------------------------------
 " Temp 
 " ----------------------------------------------------------------------------
