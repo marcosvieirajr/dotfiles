@@ -184,9 +184,9 @@ au User AirlineAfterInit :let g:airline_symbols.colnr = ' :'
 
 if has('ide')
   " mappings and options that exist only in IdeaVim
-  map <leader>f <Action>(GotoFile)
-  map <leader>g <Action>(FindInPath)
-  map <leader>b <Action>(Switcher)
+  "map <leader>f <Action>(GotoFile)
+  "map <leader>g <Action>(FindInPath)
+  "map <leader>b <Action>(Switcher)
 
   if &ide =~? 'intellij idea'
     if &ide =~? 'community'
