@@ -1,0 +1,16 @@
+[includeIf "gitdir:/Users/marcos.vieira/dev/nu/"]
+	path = /Users/marcos.vieira/.nugitconfig
+[user]
+    #signingkey = 5935FD12C0BC9B5D
+	name = Marcos Vieira Jr
+	email = marcosvieirajr@gmail.com
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[pull]
+	rebase = true
+[diff]
+	colorMoved = zebra
+[fetch]
+	prune = true
