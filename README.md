@@ -1,18 +1,24 @@
 # dotfiles
 
-### Setup dotfiles
+## Setup
+
+### Oh My ZSH
 
 ```bash
-# Oh My ZSH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 rm -rf ~/.zshrc
 
 brew tap homebrew/cask-fonts
 brew install --cask font-hack-nerd-font
+```
 
+### Simbolik links
 
-git clone git... ~/.dotfiles
+```bash
+git clone git@github.com:marcosvieirajr/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ln -s ~/.dotfiles/.zshrc ~/.zshrc
 ln -s ~/.dotfiles/.p10k.zsh ~/.p10k.zsh
@@ -21,10 +27,4 @@ ln -s ~/.dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
-## bat
-
-
-config file:
-
-`$ export BAT_CONFIG_PATH="~/.bat.conf"`
 
