@@ -114,8 +114,10 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# ...
+# custom configs
+source ~/.dotfiles/.alias
 export BAT_CONFIG_PATH="~/.dotfiles/bat.conf"
+
 
 # Nu config
 export NU_HOME="$HOME/dev/nu"

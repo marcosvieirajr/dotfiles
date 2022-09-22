@@ -27,4 +27,21 @@ ln -s ~/.dotfiles/.ideavimrc ~/.ideavimrc
 ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ```
 
+### Home Brew
 
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+brew bundle --file ~/.dotfiles/Brewfile
+```
+
+### Post install
+
+```bash
+# TODO
+```
+
+### Extract current brew instelled files
+
+```bash
+cd ~/.dotfiles && brew bundle dump --force
+```
