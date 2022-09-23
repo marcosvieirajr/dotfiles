@@ -12,6 +12,7 @@
 	rebase = true
 [diff]
 	colorMoved = zebra
+	wsErrorHighlight = all
 [fetch]
 	prune = true
 [core]
