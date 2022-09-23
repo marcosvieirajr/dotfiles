@@ -28,10 +28,12 @@ Plug 'preservim/nerdtree'
 " Gruvbox Community theme.
 Plug 'gruvbox-community/gruvbox'
 
+Plug 'bronson/vim-trailing-whitespace'
+
 " Show git file changes in the gutter.
 Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
 
-" Shows the context of the currently visible buffer contents 
+" Shows the context of the currently visible buffer contents
 Plug 'wellle/context.vim'
 
 " https://github.com/mg979/vim-visual-multi
@@ -112,12 +114,14 @@ set showmode
 "set showcmd
 set backspace=indent,eol,start
 set scrolloff=5
+set mouse=nicr              " allow scroll in iterm2 with mouse
 
 set ignorecase
 set smartcase
 set incsearch
 set hlsearch
 
+set ruler                  " always show info along bottom
 set number relativenumber
 
 set expandtab
@@ -133,6 +137,12 @@ set wildmenu
 " -----------------------------------------------------------------------------
 " Basic mappings
 " -----------------------------------------------------------------------------
+
+" learn the hjkl
+noremap <UP> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
 
 " esc in insert & visual mode
 inoremap jk <esc>
@@ -176,7 +186,7 @@ au User AirlineAfterInit :let g:airline_symbols.colnr = ' :'
 "au User AirlineAfterInit :let g:airline_symbols.colnr = ' cn:'
 
 " ----------------------------------------------------------------------------
-" IdeaVin 
+" IdeaVin
 "   https://github.com/JetBrains/ideavim
 "   https://github.com/JetBrains/ideavim/wiki/%22set%22-commands
 "   https://towardsdatascience.com/the-essential-ideavim-remaps-291d4cd3971b
@@ -202,7 +212,7 @@ else
 endif
 
 " ----------------------------------------------------------------------------
-" Temp 
+" Temp
 " ----------------------------------------------------------------------------
 "func! WordProcessorMode()
 " setlocal textwidth=80
