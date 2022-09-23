@@ -14,3 +14,5 @@
 	colorMoved = zebra
 [fetch]
 	prune = true
+[core]
+	editor = vin
