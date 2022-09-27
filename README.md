@@ -2,6 +2,12 @@
 
 ## Setup
 
+### Clone .dotviles
+
+```bash
+git clone git@github.com:marcosvieirajr/dotfiles.git ~/.dotfiles
+```
+
 ### Oh My ZSH
 
 ```bash
@@ -30,7 +36,10 @@ ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
 ### Home Brew
 
 ```bash
+# install Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# then pass in the Brewfile location
 brew bundle --file ~/.dotfiles/Brewfile
 ```
 
