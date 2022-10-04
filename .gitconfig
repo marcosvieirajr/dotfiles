@@ -16,4 +16,4 @@
 [fetch]
 	prune = true
 [core]
-	editor = vin
+	editor = vim
