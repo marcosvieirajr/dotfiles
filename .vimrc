@@ -144,14 +144,22 @@ noremap <Down> <NOP>
 noremap <Left> <NOP>
 noremap <Right> <NOP>
 
-" esc in insert & visual mode
-inoremap jk <esc>
-vnoremap jk <esc>
+" esc in insert mode with jj
+inoremap jj <esc>
 
-" esc in command mode
-cnoremap jk <C-C>
+" esc in visual mode with jk
+"vnoremap jk <esc>
 
-nnoremap <c-j> i<CR><ESC>
+" esc in command mode with jj
+cnoremap jj <C-C>
+
+nnoremap <C-j> i<CR><ESC>
+
+" toggle search highlighting
+nnoremap <F3> :set hlsearch!<CR>
+
+" Print colon when hitting semicolor
+map ; :
 " -----------------------------------------------------------------------------
 " Basic autocommands
 " -----------------------------------------------------------------------------
