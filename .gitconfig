@@ -17,3 +17,7 @@
 	prune = true
 [core]
 	editor = vim
+[alias]
+	p = pull --autostash
+	ai = add -i
+	l = log --show-linear-break --pretty=format:'%C(yellow)%h%Creset %C(green)[%C(bold green)%cr%Creset%C(green)]%Creset%C(auto)%d%Creset %s - %C(blue)[%C(bold blue)%an, %ch%Creset%C(blue)]%Creset' --abbrev-commit --date=relative
