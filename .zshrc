@@ -123,7 +123,14 @@ export BAT_CONFIG_PATH="~/.dotfiles/bat.conf"
 
 # Nu config
 export NU_HOME="$HOME/dev/nu"
-export PATH="$PATH:$NU_HOME/nucli"
+#export NUCLI_HOME="$NU_HOME/nucli"
+export NUCLI_HOME="/Users/marcos.vieira/dev/nu/nucli"
+export PATH="$PATH:$NUCLI_HOME"
+
+export GOPATH=$HOME/go 
+export PATH=$GOPATH/bin:$PATH
+
+source $HOME/.nurc
 
 # Fig post block. Keep at the bottom of this file.
 [[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"

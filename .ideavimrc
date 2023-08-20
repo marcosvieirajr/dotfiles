@@ -1,5 +1,9 @@
 
 source ~/.vimrc      " Source your .vimrc
+set showmatch matchtime=3
+inoremap } }<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap ] ]<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
+inoremap ) )<Left><c-o>%<c-o>:sleep 500m<CR><c-o>%<c-o>a
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
@@ -20,8 +24,8 @@ nnoremap <c--> :action SplitHorizontally<CR>
 nnoremap <c-=> :action Unsplit<CR>
 nnoremap <c-m> :action MoveEditorToOppositeTabGroup<CR>
 
-sethandler <c-j> a:vim
-sethandler <c-k> a:vim
+"sethandler <c-j> a:vim
+"sethandler <c-k> a:vim
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 nnoremap <c-j> <c-w>j

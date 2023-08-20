@@ -17,7 +17,15 @@
 	prune = true
 [core]
 	editor = vim
+    # autocrlf = true
 [alias]
 	p = pull --autostash
 	ai = add -i
 	l = log --show-linear-break --pretty=format:'%C(yellow)%h%Creset %C(green)[%C(bold green)%cr%Creset%C(green)]%Creset%C(auto)%d%Creset %s %C(blue)[%C(bold blue)%an, %ch%Creset%C(blue)]%Creset' --abbrev-commit --date=relative
+[url "git@github.com:"]
+	insteadOf = git://github.com/
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
